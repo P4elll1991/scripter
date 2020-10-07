@@ -9,7 +9,7 @@ export default function DashboardConfig() {
           {
             view: "button",
             localId: "legal_entitys",
-            value: "Юридические лица",
+            value: `Юридические лица`,
             css: "webix_primary",
             inputWidth: 300,
             inputHeight: 300,
