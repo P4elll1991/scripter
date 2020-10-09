@@ -42,6 +42,9 @@ export default class ScripterdView extends JetView {
     scriptModel.getScript(id).then((script: Script) => {
       this.view.text_answers.setValue(script.text);
       this.view.reaction_customer_list.clearAll();
+      script.reaction.forEach((r:reaction, index:number)=>{
+        r.rank = String(index+1)
+      })
       this.view.reaction_customer_list.parse(script.reaction, "json");
     });
   }
